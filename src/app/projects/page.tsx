@@ -7,7 +7,7 @@ export default function Projects() {
       title: "Codemia",
       description:
         "Automated coding assessment platform with multi-language execution (C/C++/Java/Python/JS). Built scalable backend using Redis + BullMQ, reducing execution latency by 50% and enabling parallel processing.",
-      imageSrc: "/projects/codemia.png",
+      imageSrc: "/projects/codemia.jpeg",
       technologies: ["Node.js", "Express", "Redis", "BullMQ", "Supabase", "React"],
       githubLink: "https://github.com/Bitsnbytes14/Codemia",
     },
@@ -15,7 +15,7 @@ export default function Projects() {
       title: "AI Resume Builder",
       description:
         "AI-powered resume builder using Gemini API that improves ATS scores and reduces resume creation time by 65%. Built with scalable backend and secure file handling.",
-      imageSrc: "/projects/resume.png",
+      imageSrc: "/projects/ai_resume.png",
       technologies: ["Node.js", "React", "MongoDB", "Gemini API", "Multer"],
       githubLink: "https://github.com/Bitsnbytes14/AI-Resume-Builder",
     },
@@ -47,7 +47,7 @@ export default function Projects() {
       title: "Business Insights Dashboard",
       description:
         "Interactive Power BI dashboard for financial analytics and reporting. Tracks KPIs like funding, growth trends, and category performance.",
-      imageSrc: "/projects/dashboard.png",
+      imageSrc: "/projects/Dashboard.png",
       technologies: ["Power BI", "Excel", "Data Analysis"],
       githubLink: "https://github.com/Bitsnbytes14/business-insights-dashboard",
     },

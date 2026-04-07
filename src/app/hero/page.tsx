@@ -64,7 +64,7 @@ export default function Hero() {
       title: "Codemia",
       description:
         "Scalable automated coding platform supporting multi-language execution with Redis + BullMQ queues. Reduced execution latency by 50% and enabled parallel processing.",
-      imageSrc: "/projects/codemia.png",
+      imageSrc: "/projects/codemia.jpeg",
       technologies: ["Node.js", "Express", "Redis", "BullMQ", "Supabase"],
       githubLink: "https://github.com/Bitsnbytes14/Codemia",
     },
@@ -72,7 +72,7 @@ export default function Hero() {
       title: "AI Resume Builder",
       description:
         "AI-powered resume builder using Gemini API, improving ATS scores and reducing resume creation time by 65%. Built with scalable backend and secure file handling.",
-      imageSrc: "/projects/resume.png",
+      imageSrc: "/projects/ai_resume.png",
       technologies: ["Node.js", "React", "MongoDB", "Gemini API"],
       githubLink: "https://github.com/Bitsnbytes14/AI-Resume-Builder",
     },
