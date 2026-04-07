@@ -5,9 +5,9 @@ import Link from "next/link";
 import TechStackCard from "../../components/TechStackCard";
 import ProjectCard from "../../components/ProjectCard";
 import GitHubCard from "../../components/GitHubCard";
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import { 
+import {
   faHtml5,
   faCss3Alt,
   faJsSquare,
@@ -18,8 +18,8 @@ import {
   faGoogle,
   faJenkins,
   faMicrosoft,
-} from '@fortawesome/free-brands-svg-icons';
-import { faCloud } from '@fortawesome/free-solid-svg-icons';
+} from "@fortawesome/free-brands-svg-icons";
+import { faCloud } from "@fortawesome/free-solid-svg-icons";
 
 export default function Hero() {
   const [githubData, setGithubData] = useState<any>(null);
@@ -29,7 +29,7 @@ export default function Hero() {
   useEffect(() => {
     async function fetchGitHubData() {
       try {
-        const res = await fetch('/api/github');
+        const res = await fetch("/api/github");
         if (!res.ok) {
           throw new Error(`Error: ${res.status} ${res.statusText}`);
         }
@@ -97,49 +97,58 @@ export default function Hero() {
   return (
     <div className="relative min-h-screen bg-black text-white flex flex-col pt-16">
 
+      {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/bg.jpg"
-          alt="Background Image"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          className="opacity-50 object-top"
+          alt="Background"
+          fill
+          className="object-cover opacity-50 object-top"
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
       </div>
 
-      <div className="relative z-10 flex flex-col justify-end min-h-[70vh] px-8 py-16 max-w-7xl mx-auto w-full">
-        <div className="mb-8">
-          <p className="text-lg font-semibold text-red-600 mb-2 flex items-center">
+      {/* HERO SECTION */}
+      <div className="relative z-10 flex flex-col justify-end min-h-[70vh] px-4 sm:px-8 md:px-12 py-16 max-w-7xl mx-auto w-full">
+
+        <div className="mb-8 text-center md:text-left">
+
+          <p className="text-sm sm:text-base font-semibold text-red-600 mb-2 flex items-center justify-center md:justify-start">
             <span className="text-xs tracking-widest border border-red-600 px-2 py-0.5 rounded-sm mr-2">
               BACKEND ENGINEER
             </span>
             PORTFOLIO
           </p>
 
-          <h1 className="text-8xl font-black leading-tight drop-shadow-lg mb-4">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-tight drop-shadow-lg mb-4">
             MOHAMMAD <br /> AHMAD
           </h1>
 
-          <p className="text-xl max-w-2xl leading-relaxed drop-shadow-md">
-            Backend-focused Full Stack Developer building scalable systems, real-time applications, and cloud-native architectures. I specialize in Node.js, distributed processing, and designing production-ready systems that solve real-world problems.
+          <p className="text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed drop-shadow-md mx-auto md:mx-0">
+            Backend-focused Full Stack Developer building scalable systems,
+            real-time applications, and cloud-native architectures. I specialize in
+            Node.js, distributed processing, and designing production-ready systems
+            that solve real-world problems.
           </p>
         </div>
 
-        <div className="flex space-x-4">
-          <Link href="/projects" className="flex items-center px-8 py-3 bg-white text-black text-xl font-bold rounded-md hover:bg-gray-200 transition-colors duration-300">
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <Link href="/projects" className="flex items-center justify-center px-6 py-3 bg-white text-black text-sm sm:text-base md:text-lg font-bold rounded-md hover:bg-gray-200 transition">
             View Projects
           </Link>
 
-          <Link href="/contact" className="flex items-center px-8 py-3 bg-gray-600 text-white text-xl font-bold rounded-md hover:bg-gray-700 transition-colors duration-300">
+          <Link href="/contact" className="flex items-center justify-center px-6 py-3 bg-gray-600 text-white text-sm sm:text-base md:text-lg font-bold rounded-md hover:bg-gray-700 transition">
             Contact Me
           </Link>
         </div>
+
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-8 pb-12 mt-16">
-        <h2 className="text-3xl font-bold mb-6 text-white">Tech Stack</h2>
+      {/* TECH STACK */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 pb-12 mt-16">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6">Tech Stack</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
           {techStack.map((tech, index) => (
             <TechStackCard key={index} name={tech.name} icon={tech.icon} color={tech.color} />
@@ -147,8 +156,9 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-8 pb-12 mt-16">
-        <h2 className="text-3xl font-bold mb-6 text-white">Featured Projects</h2>
+      {/* PROJECTS */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 pb-12 mt-16">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6">Featured Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
@@ -156,12 +166,14 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-8 pb-12 mt-16">
-        <h2 className="text-3xl font-bold mb-6 text-white">GitHub</h2>
+      {/* GITHUB */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 pb-12 mt-16">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6">GitHub</h2>
         {isLoading && <p className="text-center text-gray-400">Loading GitHub data...</p>}
         {error && <p className="text-center text-red-500">Error: {error}</p>}
         {githubData && <GitHubCard data={githubData} />}
       </div>
+
     </div>
   );
 }
