@@ -15,15 +15,17 @@ export default function Contact() {
           I'm currently open to Backend / Software Development internship opportunities, open-source collaborations, and impactful projects. If you're building something interesting or looking for a developer who focuses on scalable systems — let's connect.
         </p>
 
-        <p className="text-3xl font-bold mb-8">
-          Email:{" "}
-          <a
-            href="mailto:mahmad091323@gmail.com"
-            className="text-red-600 hover:underline"
-          >
-            mahmad091323@gmail.com
-          </a>
+        {/* ✅ FIXED EMAIL SECTION */}
+        <p className="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-center">
+          Email:
         </p>
+
+        <a
+          href="mailto:mahmad091323@gmail.com"
+          className="text-red-600 hover:underline text-base sm:text-lg md:text-xl break-words text-center block mb-8"
+        >
+          mahmad091323@gmail.com
+        </a>
 
         <form className="bg-[#141414] p-8 rounded-lg shadow-lg">
           <div className="mb-6">
