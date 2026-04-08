@@ -22,71 +22,47 @@ export default function About() {
         </p>
       </div>
 
-      <div className="w-full max-w-4xl mb-12">
+      {/* 🔥 FINAL TECH STACK SECTION */}
+      <div className="w-full max-w-5xl mb-12">
         <h2 className="text-4xl font-bold mb-6 text-red-600 text-center">
           Tech Stack & Tools
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          <div className="flex flex-col items-center">
-            <Image src="/skills/javascript.svg" alt="JavaScript" width={60} height={60} className="mb-2" />
-            <span className="text-gray-300">JavaScript</span>
-          </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          {[
+            "JavaScript",
+            "Python",
+            "TypeScript",
+            "React",
+            "Next.js",
+            "Node.js",
+            "Express.js",
+            "Tailwind CSS",
+            "Git",
+            "Docker",
+            "Firebase",
+            "MongoDB",
+          ].map((tech, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center justify-center bg-[#141414] p-5 rounded-xl 
+              hover:shadow-red-600 transition-all duration-300 hover:-translate-y-2 hover:scale-105 group"
+            >
+              {/* 🔥 Gradient Circle */}
+              <div
+                className="w-14 h-14 rounded-full bg-gradient-to-br from-red-600 to-red-800 
+                flex items-center justify-center text-lg font-bold text-white mb-3 
+                group-hover:scale-110 transition-transform duration-300"
+              >
+                {tech[0]}
+              </div>
 
-          <div className="flex flex-col items-center">
-            <Image src="/skills/python.svg" alt="Python" width={60} height={60} className="mb-2" />
-            <span className="text-gray-300">Python</span>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <Image src="/skills/typescript.svg" alt="TypeScript" width={60} height={60} className="mb-2" />
-            <span className="text-gray-300">TypeScript</span>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <Image src="/skills/react.svg" alt="React" width={60} height={60} className="mb-2" />
-            <span className="text-gray-300">React</span>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <Image src="/skills/nextjs.svg" alt="Next.js" width={60} height={60} className="mb-2" />
-            <span className="text-gray-300">Next.js</span>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <Image src="/skills/nodejs.svg" alt="Node.js" width={60} height={60} className="mb-2" />
-            <span className="text-gray-300">Node.js</span>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <Image src="/skills/express.svg" alt="Express.js" width={60} height={60} className="mb-2" />
-            <span className="text-gray-300">Express.js</span>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <Image src="/skills/tailwind.svg" alt="Tailwind CSS" width={60} height={60} className="mb-2" />
-            <span className="text-gray-300">Tailwind CSS</span>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <Image src="/skills/git.svg" alt="Git" width={60} height={60} className="mb-2" />
-            <span className="text-gray-300">Git</span>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <Image src="/skills/docker.svg" alt="Docker" width={60} height={60} className="mb-2" />
-            <span className="text-gray-300">Docker</span>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <Image src="/skills/firebase.svg" alt="Firebase" width={60} height={60} className="mb-2" />
-            <span className="text-gray-300">Firebase</span>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <Image src="/skills/mongodb.svg" alt="MongoDB" width={60} height={60} className="mb-2" />
-            <span className="text-gray-300">MongoDB</span>
-          </div>
+              {/* Name */}
+              <span className="text-gray-300 text-sm font-medium group-hover:text-white transition-colors duration-300">
+                {tech}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
 

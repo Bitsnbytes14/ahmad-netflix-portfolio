@@ -9,20 +9,23 @@ interface TechStackCardProps {
 
 export default function TechStackCard({ name, icon, color }: TechStackCardProps) {
   return (
-    <div className="bg-[#141414] p-6 rounded-lg shadow-lg flex flex-col items-center justify-center text-center 
+    <div
+      className="bg-[#141414] p-6 rounded-lg shadow-lg flex flex-col items-center justify-center text-center 
       transition-all duration-300 
       hover:shadow-red-600 hover:-translate-y-2 hover:scale-105 
-      h-40 group"
+      min-h-[150px] group"
     >
-      {/* Icon */}
+      {/* Icon OR Fallback */}
       {icon ? (
         <FontAwesomeIcon
           icon={icon}
-          className="text-5xl mb-4 transition-transform duration-300 group-hover:scale-110"
+          className="text-4xl mb-3 transition-transform duration-300 group-hover:scale-110"
           style={{ color: color }}
         />
       ) : (
-        <div className="text-3xl mb-4 text-gray-500">⚙️</div>
+        <div className="text-sm font-semibold text-gray-400 bg-gray-800 px-4 py-2 rounded-md mb-3">
+          {name}
+        </div>
       )}
 
       {/* Name */}

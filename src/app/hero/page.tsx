@@ -47,7 +47,7 @@ export default function Hero() {
   const techStack = [
     { name: "Node.js", icon: faNodeJs, color: "#3C873A" },
     { name: "React", icon: faReact, color: "#61DAFB" },
-    { name: "Next.js", icon: faReact, color: "#000000" },
+    { name: "Next.js", icon: faReact, color: "#ee82ee" },
     { name: "JavaScript", icon: faJsSquare, color: "#F7DF1E" },
     { name: "Docker", icon: faDocker, color: "#2496ED" },
     { name: "AWS", icon: faAws, color: "#FF9900" },
@@ -56,10 +56,10 @@ export default function Hero() {
     { name: "Jenkins", icon: faJenkins, color: "#D24939" },
     { name: "HTML5", icon: faHtml5, color: "#E34F26" },
     { name: "CSS3", icon: faCss3Alt, color: "#1572B6" },
-    { name: "Vercel", icon: faCloud, color: "#000000" },
+    { name: "Vercel", icon: faCloud, color: "#a82626" },
   ];
 
-  const projects = [
+  const projects = [ 
     {
       title: "Codemia",
       description:
