@@ -8,7 +8,7 @@ A modern, responsive **Netflix-inspired developer portfolio** built to showcase 
 
 ## 📸 Preview
 
-![Portfolio Screenshot](./public/preview.png)
+![Portfolio Screenshot](./public/projects/preview.png)
 
 ---
 
